@@ -1,0 +1,18 @@
+# qv. https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/AppManifests.md
+
+App(
+    appid="bme280",
+    name="BME280 (I2C)",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="bme280_entry",
+    cdefines=["APP_BME280"],
+    requires=[
+        "gui",
+	"i2c",
+    ],
+    stack_size=2 * 1024,
+    order=20,
+    fap_icon="app_icon.png",
+    fap_category="GPIO", 
+    fap_icon_assets="icons", 
+)
